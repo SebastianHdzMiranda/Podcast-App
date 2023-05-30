@@ -223,9 +223,7 @@ ul {
 /*planes
 ---------------------------------------------------------- */
 .planes {
-  margin-bottom: 8rem;
   background-color: #313c4e;
-  padding: 8rem 0;
 }
 .planes .contenido-planes h2 {
   color: #FFFFFF;
@@ -240,50 +238,51 @@ ul {
   top: 29px;
   z-index: -1;
 }
-.planes .contenido-planes p {
+.planes .contenido-planes .descripcion {
   color: #FFFFFF;
+}
+.planes .grid-planes {
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .planes .grid-planes {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
+    max-width: 80rem;
+    margin-inline: auto;
+    -webkit-margin-before: 10rem;
+            margin-block-start: 10rem;
   }
 }
 .planes .elemento-planes {
-  padding: 2rem;
+  padding: 4rem;
   text-align: center;
   flex-basis: 30rem;
-}
-.planes .elemento-planes p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: #000;
-}
-.planes .elemento-planes .btn-plan {
-  background-color: #84d9bc;
-  font-size: 2rem;
-  padding: 1.2rem 4rem;
-  font-weight: 700;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #313c4e;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border: none;
-}
-.planes .elemento-planes .btn-plan:hover {
-  cursor: pointer;
-  background-color: #5dcda7;
+  flex-grow: 1;
+  border-bottom: 1px solid #e1e1e1;
+  transition: all 0.3s ease;
 }
 @media (min-width: 768px) {
-  .planes .elemento-planes .btn-plan {
-    width: auto;
-    display: inline-block;
+  .planes .elemento-planes {
+    padding: 2rem 2.5% 4rem 2.5%;
   }
 }
-.planes .elemento-planes .btn-plan--negocio {
-  border: 1px solid #FFFFFF;
+@media (min-width: 1024px) {
+  .planes .elemento-planes {
+    padding: 2rem 4rem 4rem 4rem;
+  }
+}
+.planes .elemento-planes .precio {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.planes .elemento-planes .listado li {
+  margin-bottom: 2rem;
+}
+.planes .elemento-planes .listado li:last-of-type {
+  margin-bottom: 0;
 }
 .planes .elemento-planes--inicio {
   background-color: #FFFFFF;
@@ -291,27 +290,43 @@ ul {
 .planes .elemento-planes--inicio::before {
   content: "";
   background-image: url("../img/icono_inicio.svg");
-  display: block;
+  background-repeat: no-repeat;
   background-size: cover;
+  display: block;
   width: 10rem;
   height: 10rem;
-  background-repeat: no-repeat;
   margin: 0 auto;
   margin-bottom: 4rem;
 }
 .planes .elemento-planes--negocio {
   background-color: #84d9bc;
+  position: relative;
+  z-index: 1;
+  order: -1;
 }
 .planes .elemento-planes--negocio::before {
   content: "";
   background-image: url("../img/icono_negocio.svg");
-  display: block;
+  background-repeat: no-repeat;
   background-size: cover;
+  display: block;
   width: 10rem;
   height: 10rem;
-  background-repeat: no-repeat;
   margin: 0 auto;
   margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .planes .elemento-planes--negocio {
+    order: unset;
+    margin-block: -5rem;
+    border-radius: 2rem;
+    padding: 7rem 2.5% 4rem 2.5%;
+  }
+}
+@media (min-width: 1024px) {
+  .planes .elemento-planes--negocio {
+    padding: 7rem 4rem 4rem 4rem;
+  }
 }
 .planes .elemento-planes--pro {
   background-color: #FFFFFF;
@@ -319,16 +334,36 @@ ul {
 .planes .elemento-planes--pro::before {
   content: "";
   background-image: url("../img/icono_pro.svg");
-  display: block;
+  background-repeat: no-repeat;
   background-size: cover;
+  display: block;
   width: 10rem;
   height: 10rem;
-  background-repeat: no-repeat;
   margin: 0 auto;
   margin-bottom: 4rem;
 }
+@media (min-width: 768px) {
+  .planes .elemento-planes:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 
-.btn-header {
+.testimoniales {
+  text-align: center;
+}
+.testimoniales h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 103%;
+  height: 1rem;
+  background-color: #84d9bc;
+  top: 29px;
+  z-index: -1;
+}
+
+.btn-header, .btn-plan {
   background-color: #84d9bc;
   font-size: 2rem;
   padding: 1.2rem 4rem;
@@ -341,14 +376,19 @@ ul {
   transition: background-color 0.3s ease;
   border: none;
 }
-.btn-header:hover {
+.btn-header:hover, .btn-plan:hover {
   cursor: pointer;
   background-color: #5dcda7;
 }
 @media (min-width: 768px) {
-  .btn-header {
+  .btn-header, .btn-plan {
     width: auto;
     display: inline-block;
   }
+}
+
+.btn-plan {
+  margin-top: 2rem;
+  border: 1px solid #FFFFFF;
 }
 /*# sourceMappingURL=app.css.map */

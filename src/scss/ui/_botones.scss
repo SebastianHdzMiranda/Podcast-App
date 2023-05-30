@@ -4,3 +4,10 @@
 .btn-header{
     @include m.boton(v.$primario, v.$secundario);
 }
+
+.btn-plan{
+    @extend .btn-header; 
+    margin-top: 2rem;
+    border: 1px solid v.$blanco;
+    
+}

@@ -64,11 +64,11 @@
 @mixin img($url) {
     content: '';
     background-image: url($url);
-    display: block;
+    background-repeat: no-repeat;
     background-size: cover;
+    display: block;
     width: 10rem;
     height: 10rem;
-    background-repeat: no-repeat;
     margin: 0 auto;
     margin-bottom: 4rem;
 }

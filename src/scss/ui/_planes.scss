@@ -4,9 +4,7 @@
 /*planes
 ---------------------------------------------------------- */
 .planes{
-    margin-bottom: v.$separacion;
     background-color: v.$secundario;
-    padding: 8rem 0;
     .contenido-planes{
         h2{
             color: v.$blanco;
@@ -14,30 +12,47 @@
                 @include m.headingBorder(v.$primario);
             }
         }
-        p{
+        .descripcion{
             color: v.$blanco;
         }
     }
     .grid-planes{
+        display: flex;
+        flex-direction: column;
         @include m.tablet{ 
-            display: flex;
+            flex-direction: row;
             justify-content: center;
+            max-width: 80rem;
+            margin-inline: auto;
+            margin-block-start: 10rem; //propiedades logicas de margin, inline, margenes izq-derec, block, arriba-abajo
         }
     }
     .elemento-planes{
-        padding: 2rem;
+        padding: 4rem;
         text-align: center;
         flex-basis: 30rem;
-        p{
-            font-size: 1.6rem;
-            line-height: 1.5;
-            color: v.$negro;
+        flex-grow: 1;
+        border-bottom: 1px solid #e1e1e1;
+        transition: all .3s ease;
+        @include m.tablet{ 
+            padding: 2rem 2.5% 4rem 2.5%;
         }
-        .btn-plan{
-            @include m.boton(v.$primario, v.$secundario);
+        @include m.desktop{ 
+        padding: 2rem 4rem 4rem 4rem;
+            
+        }
+        .precio{
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .listado{
+            li{
+                margin-bottom: 2rem;
 
-            &--negocio{
-                border: 1px solid v.$blanco;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
             }
         }
         &--inicio{
@@ -48,14 +63,33 @@
         }
         &--negocio{
             background-color: v.$primario;
+            position: relative;
+            z-index: 1;
             &::before{
                 @include m.img('../img/icono_negocio.svg');
+            }
+            order: -1;
+            @include m.tablet{ 
+                order: unset;
+                // margin: -5rem 0;
+                margin-block: -5rem;
+                border-radius: 2rem;
+                padding: 7rem 2.5% 4rem 2.5%;
+            }
+            @include m.desktop{ 
+                padding: 7rem 4rem 4rem 4rem;
+                    
             }
         }
         &--pro{
             background-color: v.$blanco;
             &::before{
                 @include m.img('../img/icono_pro.svg');
+            }
+        }
+        @include m.tablet{ 
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }

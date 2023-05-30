@@ -1,0 +1,11 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+.testimoniales{
+    text-align: center;
+    h2{
+        &::before{
+            @include m.headingBorder(v.$primario);
+        }
+    }
+}
