@@ -1,0 +1,16 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+/* estadisticas
+---------------------------------------------------------- */
+.estadisticas{
+    h2{
+        &::before{
+            @include m.headingBorder(v.$primario);
+            width: 70%;
+            @include m.tablet{ 
+                width: 103%;
+            }
+        }
+    }
+}

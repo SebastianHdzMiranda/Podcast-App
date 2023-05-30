@@ -38,7 +38,7 @@
         background-color: darken($color, 10);
     }
 
-    @include tablet {
+    @include tablet { //nombre mixin sin sobrenombre m, en el mismo archivo
         width: auto;
         display: inline-block;
         
@@ -49,4 +49,26 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin headingBorder($bg) {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 103%;
+    height: 1rem;
+    background-color: $bg;
+    top: 29px;
+    z-index: -1;
+}
+@mixin img($url) {
+    content: '';
+    background-image: url($url);
+    display: block;
+    background-size: cover;
+    width: 10rem;
+    height: 10rem;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 4rem;
 }

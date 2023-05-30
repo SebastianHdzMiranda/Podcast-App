@@ -1,0 +1,6 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+.btn-header{
+    @include m.boton(v.$primario, v.$secundario);
+}

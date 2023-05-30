@@ -1,0 +1,62 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+/*planes
+---------------------------------------------------------- */
+.planes{
+    margin-bottom: v.$separacion;
+    background-color: v.$secundario;
+    padding: 8rem 0;
+    .contenido-planes{
+        h2{
+            color: v.$blanco;
+            &::before{
+                @include m.headingBorder(v.$primario);
+            }
+        }
+        p{
+            color: v.$blanco;
+        }
+    }
+    .grid-planes{
+        @include m.tablet{ 
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .elemento-planes{
+        padding: 2rem;
+        text-align: center;
+        flex-basis: 30rem;
+        p{
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: v.$negro;
+        }
+        .btn-plan{
+            @include m.boton(v.$primario, v.$secundario);
+
+            &--negocio{
+                border: 1px solid v.$blanco;
+            }
+        }
+        &--inicio{
+            background-color: v.$blanco;
+            &::before{
+                @include m.img('../img/icono_inicio.svg');
+            }
+        }
+        &--negocio{
+            background-color: v.$primario;
+            &::before{
+                @include m.img('../img/icono_negocio.svg');
+            }
+        }
+        &--pro{
+            background-color: v.$blanco;
+            &::before{
+                @include m.img('../img/icono_pro.svg');
+            }
+        }
+    }
+}

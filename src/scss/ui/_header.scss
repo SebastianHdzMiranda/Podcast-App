@@ -1,0 +1,42 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+/*header
+---------------------------------------------------------- */
+.header{
+    background-image: linear-gradient(v.$secundarioOpacity 0%, v.$secundarioOpacity 100%), url(../img/header.jpg);//creacion de filtro con gradient
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70rem;
+    @include m.tablet{ 
+        min-height: 80rem;
+    }
+    .logo{
+        padding-top: 5rem;
+        max-width: 20rem;
+        margin: 0 auto;
+        @include m.tablet{ 
+            margin: 0;
+        }
+    }
+    
+}
+.header-info{
+    padding: 10rem 0;
+    @include m.desktop{ 
+        padding: 15rem 0;
+    }
+    h1{
+        color: v.$blanco;
+        font-size: 4.5rem;
+        @include m.tablet{ 
+            font-size: 6rem;
+            max-width: 50%;
+        }
+        @include m.desktop{ 
+            max-width: 40%
+        }
+    }
+    
+}

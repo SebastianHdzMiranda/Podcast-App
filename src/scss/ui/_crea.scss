@@ -1,0 +1,22 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+/*crea
+---------------------------------------------------------- */
+.crea{
+    @include m.tablet{ 
+        @include m.grid(2, 2rem);
+        align-items: center;
+    }
+}
+.crea-contenido{
+    margin-top: 4rem;
+    @include m.tablet{ 
+        margin-top: 0;
+    }
+    h2{
+        &::before{
+            @include m.headingBorder(v.$primario);
+        }
+    }
+}
