@@ -349,8 +349,13 @@ ul {
   }
 }
 
+/*testimoniales
+---------------------------------------------------------- */
 .testimoniales {
   text-align: center;
+}
+.testimoniales h2 {
+  margin-bottom: 8rem;
 }
 .testimoniales h2::before {
   content: "";
@@ -361,6 +366,98 @@ ul {
   background-color: #84d9bc;
   top: 29px;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .contenido-testimoniales {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contenido-testimoniales {
+    gap: 8rem;
+  }
+}
+.contenido-testimoniales .imagen {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .contenido-testimoniales .imagen {
+    margin-bottom: 0;
+  }
+}
+.contenido-testimoniales .imagen img {
+  margin: 0 auto;
+}
+.contenido-testimoniales .contenedor-testimoniales {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  text-align: left;
+  background-color: #84d9bc;
+  border: 5px solid #313c4e;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+  padding: 0 2rem 0 8rem;
+  position: relative;
+}
+.testimonial:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .testimonial:nth-child(1) {
+    margin-right: 20%;
+  }
+  .testimonial:nth-child(2) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .testimonial:nth-child(3) {
+    margin-left: 20%;
+  }
+}
+.testimonial .texto::before {
+  content: "";
+  position: absolute;
+  content: "";
+  background-image: url("../img/comilla.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  width: 5rem;
+  height: 5rem;
+  background-size: 5rem;
+  left: 20px;
+  top: 27px;
+}
+@media (min-width: 768px) {
+  .testimonial .texto::before {
+    top: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .testimonial .texto::before {
+    top: 27px;
+  }
+}
+@media (min-width: 768px) {
+  .testimonial .texto {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .testimonial .texto {
+    font-size: 2rem;
+  }
 }
 
 .btn-header, .btn-plan {
