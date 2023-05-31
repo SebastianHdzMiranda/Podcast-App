@@ -351,11 +351,8 @@ ul {
 
 /*testimoniales
 ---------------------------------------------------------- */
-.testimoniales {
-  text-align: center;
-}
 .testimoniales h2 {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 .testimoniales h2::before {
   content: "";

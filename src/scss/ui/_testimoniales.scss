@@ -4,9 +4,9 @@
 /*testimoniales
 ---------------------------------------------------------- */
 .testimoniales{
-    text-align: center;
+    // text-align: center;
     h2{
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         &::before{
             @include m.headingBorder(v.$primario);
         }
