@@ -300,7 +300,6 @@ ul {
 }
 .planes .elemento-planes--negocio {
   background-color: #84d9bc;
-  position: relative;
   z-index: 1;
   order: -1;
 }
@@ -455,6 +454,62 @@ ul {
   .testimonial .texto {
     font-size: 2rem;
   }
+}
+
+.footer {
+  background-color: #313c4e;
+}
+.footer .contenido {
+  padding: 5rem 0 1rem 0;
+  border-bottom: 2px solid #84d9bc;
+}
+.footer .imagen {
+  max-width: 20rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .footer .secciones {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .footer .secciones {
+    gap: 5rem;
+  }
+}
+.footer .footer-seccion {
+  flex: 1;
+}
+.footer .footer-seccion h3 {
+  color: #84d9bc;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .footer .footer-seccion h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer .footer-seccion h3 {
+    font-size: 2.8rem;
+  }
+}
+.footer .footer-seccion a {
+  color: #FFFFFF;
+  line-height: 1.8;
+}
+.footer .copyright {
+  text-align: center;
+  padding: 1rem 0;
+}
+.footer .copyright p {
+  margin: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .btn-header, .btn-plan {

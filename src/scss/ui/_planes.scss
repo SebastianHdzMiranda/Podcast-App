@@ -38,8 +38,8 @@
             padding: 2rem 2.5% 4rem 2.5%;
         }
         @include m.desktop{ 
-        padding: 2rem 4rem 4rem 4rem;
-            
+            padding: 2rem 4rem 4rem 4rem;
+
         }
         .precio{
             font-size: 1.8rem;
@@ -63,7 +63,6 @@
         }
         &--negocio{
             background-color: v.$primario;
-            position: relative;
             z-index: 1;
             &::before{
                 @include m.img('../img/icono_negocio.svg');
