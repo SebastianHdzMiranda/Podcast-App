@@ -76,8 +76,19 @@ ul {
 
 /*header
 ---------------------------------------------------------- */
-.header {
+.notavif.notwebp .header {
   background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url(../img/header.jpg);
+}
+
+.webp.notavif .header {
+  background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url(../img/header.webp);
+}
+
+.avif .header {
+  background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url(../img/header.avif);
+}
+
+.header {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;

@@ -3,8 +3,18 @@
 
 /*header
 ---------------------------------------------------------- */
-.header{
+.notavif.notwebp .header{
     background-image: linear-gradient(v.$secundarioOpacity 0%, v.$secundarioOpacity 100%), url(../img/header.jpg);//creacion de filtro con gradient
+}
+
+.webp.notavif .header{
+    background-image: linear-gradient(v.$secundarioOpacity 0%, v.$secundarioOpacity 100%), url(../img/header.webp);
+}
+
+.avif .header{
+    background-image: linear-gradient(v.$secundarioOpacity 0%, v.$secundarioOpacity 100%), url(../img/header.avif);
+}
+.header{
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
