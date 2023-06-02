@@ -41,6 +41,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  width: auto;
 }
 
 h1, h2, h3 {
@@ -478,6 +479,9 @@ ul {
   max-width: 20rem;
   margin: 0 auto;
   margin-bottom: 5rem;
+}
+.footer .imagen img {
+  width: 100%;
 }
 @media (min-width: 768px) {
   .footer .secciones {

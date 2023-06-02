@@ -11,6 +11,9 @@
         max-width: 20rem;
         margin: 0 auto;
         margin-bottom: 5rem;
+        img{
+            width: 100%;
+        }
     }
     .secciones{
         @include m.tablet{ 
