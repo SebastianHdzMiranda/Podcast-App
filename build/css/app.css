@@ -144,7 +144,7 @@ ul {
   display: none;
   position: absolute;
   border-top: 5px solid #84d9bc;
-  background-color: rgba(49, 60, 78, 0.9098039216);
+  background-color: rgba(49, 60, 78, 0.96);
   -webkit-backdrop-filter: blur(9px);
           backdrop-filter: blur(9px);
   text-align: center;
@@ -536,14 +536,6 @@ ul {
   padding: 5rem 0 1rem 0;
   border-bottom: 2px solid #84d9bc;
 }
-.footer .imagen {
-  max-width: 20rem;
-  margin: 0 auto;
-  margin-bottom: 5rem;
-}
-.footer .imagen img {
-  width: 100%;
-}
 @media (min-width: 768px) {
   .footer .secciones {
     display: grid;
@@ -555,6 +547,13 @@ ul {
   .footer .secciones {
     gap: 5rem;
   }
+}
+.footer .imagen {
+  max-width: 20rem;
+  margin: 0 auto 5rem auto;
+}
+.footer .imagen img {
+  width: 100%;
 }
 .footer .footer-seccion {
   flex: 1;
