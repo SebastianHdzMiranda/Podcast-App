@@ -5,91 +5,91 @@
 ---------------------------------------------------------- */
 .planes{
     background-color: v.$secundario;
-    .contenido-planes{
-        h2{
-            color: v.$blanco;
-            &::before{
-                @include m.headingBorder(v.$primario);
+}
+.contenido-planes{
+    h2{
+        color: v.$blanco;
+        &::before{
+            @include m.headingBorder(v.$primario);
+        }
+    }
+    .descripcion{
+        color: v.$blanco;
+    }
+}
+.grid-planes{
+    display: flex;
+    flex-direction: column;
+    @include m.tablet{ 
+        flex-direction: row;
+        justify-content: center;
+        max-width: 80rem;
+        margin-inline: auto;
+        margin-block-start: 10rem; //propiedades logicas de margin, inline, margenes izq-derec, block, arriba-abajo
+    }
+}
+.elemento-planes{
+    padding: 4rem;
+    text-align: center;
+    flex-basis: 30rem;
+    flex-grow: 1;
+    border-bottom: 1px solid #e1e1e1;
+    transition: all .3s ease;
+    @include m.tablet{ 
+        padding: 2rem 2.5% 4rem 2.5%;
+    }
+    @include m.desktop{ 
+        padding: 2rem 4rem 4rem 4rem;
+
+    }
+    .precio{
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .listado{
+        li{
+            margin-bottom: 2rem;
+
+            &:last-of-type{
+                margin-bottom: 0;
             }
         }
-        .descripcion{
-            color: v.$blanco;
+    }
+    &--inicio{
+        background-color: v.$blanco;
+        &::before{
+            @include m.img('../img/icono_inicio.svg');
         }
     }
-    .grid-planes{
-        display: flex;
-        flex-direction: column;
-        @include m.tablet{ 
-            flex-direction: row;
-            justify-content: center;
-            max-width: 80rem;
-            margin-inline: auto;
-            margin-block-start: 10rem; //propiedades logicas de margin, inline, margenes izq-derec, block, arriba-abajo
+    &--negocio{
+        background-color: v.$primario;
+        z-index: 1;
+        &::before{
+            @include m.img('../img/icono_negocio.svg');
         }
-    }
-    .elemento-planes{
-        padding: 4rem;
-        text-align: center;
-        flex-basis: 30rem;
-        flex-grow: 1;
-        border-bottom: 1px solid #e1e1e1;
-        transition: all .3s ease;
+        order: -1;
         @include m.tablet{ 
-            padding: 2rem 2.5% 4rem 2.5%;
+            order: unset;
+            // margin: -5rem 0;
+            margin-block: -5rem;
+            border-radius: 2rem;
+            padding: 7rem 2.5% 4rem 2.5%;
         }
         @include m.desktop{ 
-            padding: 2rem 4rem 4rem 4rem;
-
+            padding: 7rem 4rem 4rem 4rem;
+                
         }
-        .precio{
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
+    }
+    &--pro{
+        background-color: v.$blanco;
+        &::before{
+            @include m.img('../img/icono_pro.svg');
         }
-        .listado{
-            li{
-                margin-bottom: 2rem;
-
-                &:last-of-type{
-                    margin-bottom: 0;
-                }
-            }
-        }
-        &--inicio{
-            background-color: v.$blanco;
-            &::before{
-                @include m.img('../img/icono_inicio.svg');
-            }
-        }
-        &--negocio{
-            background-color: v.$primario;
-            z-index: 1;
-            &::before{
-                @include m.img('../img/icono_negocio.svg');
-            }
-            order: -1;
-            @include m.tablet{ 
-                order: unset;
-                // margin: -5rem 0;
-                margin-block: -5rem;
-                border-radius: 2rem;
-                padding: 7rem 2.5% 4rem 2.5%;
-            }
-            @include m.desktop{ 
-                padding: 7rem 4rem 4rem 4rem;
-                    
-            }
-        }
-        &--pro{
-            background-color: v.$blanco;
-            &::before{
-                @include m.img('../img/icono_pro.svg');
-            }
-        }
-        @include m.tablet{ 
-            &:hover{
-                transform: scale(1.1);
-            }
+    }
+    @include m.tablet{ 
+        &:hover{
+            transform: scale(1.1);
         }
     }
 }
