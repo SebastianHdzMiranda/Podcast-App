@@ -58,16 +58,13 @@
     }
     .navegacion{
         position: absolute;
-        // border-top: 5px solid v.$primario;
         background-color: rgb(49 60 78 / 96%);
         backdrop-filter: blur(9px);
         text-align: center;
-        // padding: 1rem 7rem;
         border-radius: 10px;
         overflow: hidden;
 
         width: 100%;
-        // height: 376px;
         height: 0;
         right: 0;
         left: 0;
@@ -84,10 +81,14 @@
             color: v.$blanco;
             font-weight: 700;
             display: block;
+            padding: 0 7rem;
+
+            @include m.tablet{
+                padding: 0 10rem;
+            }
         }
     }
     .nav-visible{
-        // display: block;
         height: 376px;
         border-top: 5px solid v.$primario;
     }
